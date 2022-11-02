@@ -1,0 +1,496 @@
+/* This is the Slideshow Container  */
+
+.slideshow_container,
+.homeImageContainer,
+.typesContainer {
+    z-index: 2;
+    max-width: 1200px;
+    max-height: 400px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeImageContainer {
+    max-height: 600px;
+}
+
+.typesContainer {
+    position: relative;
+    max-height: 1000px;
+}
+
+
+/* CSS for the images inside the slide */
+
+.slideImages,
+.slideImages2,
+.homeImages,
+.teaTypes {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.homeImages {
+    height: 600px;
+}
+
+.teaTypes {
+    height: 650px;
+    filter: brightness(60%);
+    /* transform: rotate(90deg); */
+}
+
+
+/* Slight adjustment for the slide 2 brightness */
+
+.slideImages2 {
+    filter: brightness(70%);
+}
+
+
+/* CSS for the container that holds the text which is showed inside the slide */
+
+.slideshowTextContainer,
+.homeImageTextContainer {
+    width: 100%;
+    display: grid;
+    position: absolute;
+    justify-content: center;
+    top: 20%;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'text1' 'text2' 'slideshowbtn';
+}
+
+.homeImageTextContainer {
+    top: 22%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0;
+    /* border:1px red solid; */
+    /* padding: 10px 10px 10px 10px; */
+    width: 100%;
+    height: 22em;
+    /* left:13%; */
+    grid-template-rows: auto;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 'textbox1 textbox2'
+}
+
+
+/* These are the CSS common for both previous and next buttons */
+
+.previous,
+.next {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -22px;
+    padding: 5px 0px 5px 12px;
+    color: white;
+    border: 2px white solid;
+    border-radius: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+
+/* Slight changes to next button */
+
+.next {
+    margin-right: 16px;
+    right: 0;
+}
+
+
+/* Slight changes to previous button */
+
+.previous {
+    margin-left: 16px;
+    left: 0;
+}
+
+
+/* Animation on the previous buttons when hovered over the slideshow container  */
+
+.slideshow_container:hover .previous {
+    opacity: 0.8;
+    margin-left: 8px;
+}
+
+.slideshow_container a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Animation on the previous buttons when hovered over the slideshow container  */
+
+.slideshow_container:hover .next {
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+
+/* Changes to the next and previous buttons on hover */
+
+.previous:hover,
+.next:hover {
+    background-color: #0f763f;
+    border-color: #0f763f;
+}
+
+
+/* CSS for the texts inside the slideshow */
+
+.slideText1,
+.slideText3,
+.homeText1 {
+    grid-area: text1;
+    display: block;
+    width: 100%;
+    color: black;
+    font-size: 2.4em;
+    font-family: customFont2;
+    text-align: center;
+}
+
+.homeText1 {
+    border-right: 1px rgb(197, 255, 174) solid;
+    width: 90%;
+    /* height:80%; */
+    margin-top: auto;
+    margin-bottom: auto;
+    /* padding-top:10%; */
+    padding-left: 5%;
+    padding-right: 2%;
+    text-align: left;
+    font-family: customFont;
+    line-height: 1.5;
+    font-size: 1.8em;
+    grid-area: textbox1;
+    color: white;
+}
+
+@media only screen and (max-width:499px) {
+    .homeImageTextContainer {
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 15%;
+        height: auto;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-areas: 'textbox1' 'textbox2';
+    }
+    .homeText1 {
+        font-family: customFont2;
+        padding-top: 6%;
+        border-right: unset;
+        font-size: 1.2rem;
+    }
+    .homeText2 li {
+        font-family: customFont2;
+        /* list-style-position: inside; */
+        font-size: 0.6em;
+        padding-left: unset;
+    }
+    .homeText2 ul {
+        margin-top: 3%;
+        margin-left: 1%;
+    }
+    .homeButton {
+        font-size: 150px;
+    }
+}
+
+.homeText2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-family: customFont;
+    line-height: 1.5;
+    font-size: 1.8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    grid-area: textbox2;
+}
+
+li {
+    text-align: left;
+    list-style: url("/img/customBullet.png");
+    font-size: 0.8em;
+    line-height: 1.7;
+}
+
+.homeButton {
+    margin-top: 10px;
+    /* width:20%; */
+    /* width:10em; */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.5em;
+    font-family: customFont;
+    color: white;
+    background-color: rgb(83, 194, 69, 0.6);
+    cursor: pointer;
+    border: none;
+    padding: 2% 4% 2% 4%;
+    transition: 0.3s;
+}
+
+.homeButton:hover {
+    background-color: rgb(83, 194, 69, 1);
+}
+
+
+/* Text adjustments for slide 2 */
+
+.slideText3 {
+    font-size: 2em;
+    font-family: customFont;
+    color: white;
+    padding-top: 50px;
+}
+
+
+/* CSS for the texts inside the slideshow */
+
+.slideText2,
+.slideText4 {
+    grid-area: text2;
+    color: black;
+    font-size: 1.5em;
+    font-family: customFont;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+
+/* Text adjustments for slide 2 */
+
+.slideText4 {
+    color: white;
+    font-family: customFont2;
+    font-size: 2em;
+    padding-top: 0px;
+}
+
+
+/* CSS for the slideshow button */
+
+.slideshowButton,
+.typesOfTeaButton,
+.manufacturersButton {
+    grid-area: slideshowbtn;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-family: customFont;
+    color: white;
+    background-color: #0f763f;
+    cursor: pointer;
+    border: none;
+    padding: 2% 3% 2% 3%;
+    transition: 0.3s;
+}
+
+.slideshowButton {
+    padding: 0.8em 0.3em 0.8em 0.3em;
+    width: 200px;
+}
+
+.manufacturersButton {
+    max-width: 150px;
+    padding: 0.6em 1.2em 0.6em 1.2em;
+    margin-bottom: 1.7em;
+    margin-left: 0.9em;
+    border-radius: 50px;
+    box-shadow: 0 2px 15px -6px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:910px) {
+    .manufacturersButton {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.typesOfTeaButton {
+    font-family: customFont2;
+    padding: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
+    margin-bottom: 1.5em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px white solid;
+    font-size: 0.9em;
+    padding: 0.9em 1.2em 0.9em 1.2em;
+    width: auto;
+}
+
+
+/* Slideshow button on hover */
+
+.slideshowButton:hover,
+.typesOfTeaButton:hover,
+.manufacturersButton:hover {
+    background-color: #0e5e33;
+}
+
+
+/* This is for the container that holds the dot items */
+
+.dotContainer {
+    text-align: center;
+    position: absolute;
+    bottom: 0.8em;
+    /* left:46.8%; */
+    width: 100%;
+}
+
+
+/* This is the CSS for the dots */
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+    background-color: rgba(255, 255, 255, 00);
+    border: 2px #bbb solid;
+    border-radius: 100%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+/* This is the CSS fot the dot on hover/active */
+
+.active,
+.dot:hover {
+    background-color: white;
+    opacity: unset;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.8s;
+    animation-name: fade;
+    animation-duration: 1.8s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 985px) {
+    .slideshowTextContainer {
+        width: 70%;
+        left: 15%;
+    }
+    /* .homeImageTextContainer {
+        width:70%;
+        left:13%;
+    } */
+}
+
+@media only screen and (min-width:500px) and (max-width:850px) {
+    .slideText1,
+    .slideText3,
+    .slideText4 {
+        font-size: 4vw;
+    }
+    .slideText2 {
+        font-size: 2.4vw;
+    }
+    .slideshowButton {
+        font-size: 0.8em;
+        width: 180px;
+        padding: 0.6em 0.2em 0.6em 0.2em;
+    }
+    .homeText1 {
+        font-size: 3.2vw;
+    }
+    .homeText2 {
+        /* font-size:3vw; */
+        font-size: 1.3em;
+    }
+    .homeButton {
+        font-size: 1.5vmax;
+    }
+}
+
+@media only screen and (min-width:500px) {
+    .heading2,
+    .heading4 {
+        font-size: 4.3em;
+        max-width: 300px;
+    }
+    .heading4 {
+        max-width: 390px;
+    }
+    .buttonHolder {
+        flex-direction: row;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        /* border:1px red solid; */
+    }
+    .typesOfTeaButton {
+        font-size: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-left: 2.1em;
+        margin-right: 1.4em;
+    }
+    .arrow_Container {
+        top: 9em;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .previous,
+    .next {
+        display: none;
+    }
+    .slideText1,
+    .slideText3,
+    .slideText4 {
+        font-size: 3.6vmax;
+    }
+    .slideText2 {
+        font-size: 2.4vmax;
+    }
+    .slideshowButton {
+        font-size: 0.7em;
+        padding: 0.7em 1em 0.7em 1em;
+        width: auto;
+    }
+}

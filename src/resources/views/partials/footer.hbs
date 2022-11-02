@@ -1,0 +1,59 @@
+    <footer class="footerContainer">
+      <div class="footerBox">
+        <ul class="footerAboutUs">
+          <li> <a href="#"><img src="/img/websitelogo.png" alt="logo"> </a></li>
+          <li> We are pioneers in the Tea Marketing Industry and we provide the high-quality premium tea delivered to
+            your doorstep. Our Tea Products are safely packed and we deliver all across Sri Lanka.</li>
+        </ul>
+
+
+        <ul class="footerInfo">
+          <li> TEA HOUSE (PVT) LTD</li>
+          <li class="footerItem1"> <b>Office Address :</b> 55 1/1 Castle Street, Mutwal, Colombo 15, 01500 Sri Lanka.
+          </li>
+          <li class="footerItem2"> <b>Phone :</b> 077 711 2485 (M.K.Naidu) </li>
+          <li class="footerItem3"> <b>Email :</b> officalteahouse@gmail.com </li>
+        </ul>
+
+        <ul class="socialMedia">
+          <li> <a href="https://www.facebook.com/"> <img src="/img/fbIcon.png" alt="facebook"> </a> </li>
+          <li> <a href="https://www.instagram.com/?hl=en"> <img src="/img/instaIcon.png" alt="instagram"> </a> </li>
+          <li> <a href="https://twitter.com/?lang=en"> <img src="/img/twitterIcon.png" alt="twitter"> </a> </li>
+        </ul>
+
+        <ul class="usefulLinks">
+          <li> USEFUL LINKS</li>
+          <li> <a href="https://pixabay.com/" target="_blank" rel="noopener"> Pixabay </a> </li>
+          <!-- <li> <a href="#"> Shutterstock </a> </li> -->
+          <li> <a href="https://unsplash.com/s/photos/tea" target="_blank" rel="noopener"> Unsplash </a> </li>
+          <li> <a href="https://www.pexels.com/search/Tea/" target="_blank" rel="noopener"> Pexels </a> </li>
+          <li> <a href="https://en.wikipedia.org/wiki/Creative_Commons" target="_blank" rel="noopener"> Creative Commons </a></li>
+          <li> <a href="https://commons.wikimedia.org/wiki/Main_Page" target="_blank" rel="noopener"> WikiMedia Commons </a></li>
+        </ul>
+
+        <br><br>
+      </div>
+      <div class="footerEnding">
+        
+        <p> 2020 All Rights Reserved Tea House</p>
+      </div>
+    </footer>
+
+<script src="/navcontrols.js"></script>
+    <script>
+      //check whether browser support service workers
+      if ('serviceWorker' in navigator) {
+          //wait until page loaded to avoid delaying rendering
+          window.addEventListener('load', function() {
+              //register service worker
+              navigator.serviceWorker.register('/serviceworker.js').then(
+                  function(registration) {
+                      console.log('Service worker registration successful', 
+                                   registration);
+                  }, 
+                  function(err) {
+                      console.log('Service worker registration failed', err);
+              });
+          });
+      }
+  </script>

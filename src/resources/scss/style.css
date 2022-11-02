@@ -1,0 +1,1462 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'customFont';
+    src: url("/fonts/Poppins-Bold.ttf");
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'customFont2';
+    src: url("/fonts/Poppins-Light.ttf");
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'customFont4';
+    src: url("/fonts/Italianno-Regular.ttf");
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* Css common for the body tag  */
+
+body {
+    margin: 0;
+    /* background-color: #0f763f; */
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/backgroundImage1.webp");
+    background-size: contain;
+    /* filter: brightness(70%); */
+}
+
+
+/* CSS for the side navigation pannel for the moile view  */
+
+.sidenav {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+    grid-area: navBar;
+    position: absolute;
+    top: 72px;
+    height: auto;
+    width: 0;
+    /* position: fixed; */
+    z-index: 1;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+
+/* CSS for the text inside the mobile navigation pannel  */
+
+.sidenav a {
+    padding: 14px 8px 14px 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: .9em;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    font-family: customFont;
+    white-space: nowrap;
+}
+
+
+/* CSS on hover over the text inside the navigation pannel */
+
+.sidenav a:hover {
+    color: #37aa35;
+    text-decoration: underline;
+}
+
+
+/* .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left:0;
+  font-size: 36px;
+  margin: 0;
+} */
+
+
+/* CSS for the header container  */
+
+.container {
+    top: 0;
+    position: sticky;
+    width: auto;
+    z-index: 100;
+}
+
+
+/* This is the CSS for the mobile navigation bar itself  */
+
+.navigation {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 1px #16650A solid;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: 70px;
+    grid-template-columns: 70px auto 70px;
+    grid-template-areas: 'cartIcon logo burgerIcon';
+}
+
+
+/* CSS for the mobile view logo  */
+
+.websitelogo1,
+.websitelogo2 {
+    grid-area: logo;
+    width: 12em;
+    height: auto;
+    /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
+    /* border-radius: 10px; */
+    display: block;
+    position: sticky;
+    margin: 5px auto auto auto;
+    /* margin-left: auto;
+  margin-right:auto;
+  margin-top:5px;
+  margin-bottom: auto; */
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* .logo1 {
+  margin-top:auto;
+  margin-bottom: auto;
+} */
+
+
+/* CSS for the desktop view is currently hidden */
+
+.websitelogo2 {
+    display: none;
+}
+
+
+/* .navigation {
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+  border-bottom:1px #16650A solid;
+} */
+
+
+/* CSS for the burger icon  */
+
+.option {
+    grid-area: burgerIcon;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+    display: block;
+    margin: 25px auto auto auto;
+    /* margin-left:auto;
+    margin-right: auto;
+    margin-top:25px;
+    margin-bottom: auto; */
+}
+
+
+/* For the body content */
+
+.content {
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    /* margin-left: auto;
+  margin-top:auto;
+  margin-right: auto; */
+}
+
+
+/* THe shopping button (ADD TO CART BUTTON) for the desktop view is also currently hidden from the user */
+
+.shoppingButton {
+    display: none;
+}
+
+
+/* CSS for the cart icon in the mobile view  */
+
+.cart2,
+.cart {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+    border: 2px black solid;
+    border-radius: 20px;
+    display: block;
+    grid-area: cartIcon;
+    width: 1.5em;
+    height: auto;
+    margin: auto;
+    /* margin-bottom:auto;
+  margin-top:auto;
+  margin-left:auto;
+  margin-right:auto; */
+    padding: 4px 5px 4px 2px;
+}
+
+
+/* CSS for the container that holds the cart icon  */
+
+.mobileShoppingButton {
+    margin: auto;
+}
+
+
+/* CSS for the container that holds the heading */
+
+.topicContainer {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr auto 2fr;
+    grid-template-areas: 'line1 topic line2';
+    margin: 15px 18px 25px 18px;
+}
+
+
+/* CSS for the 2 lines on either side of the heading */
+
+.hrLine,
+.hrLine2 {
+    height: 2px;
+    width: 100%;
+    background: #0f763f;
+    margin: auto;
+}
+
+.hrLine {
+    grid-area: line1;
+}
+
+.hrLine2 {
+    grid-area: line2;
+}
+
+
+/* CSS for the topic inside the topic container  */
+
+.topic1,
+.topic2 {
+    grid-area: topic;
+    text-align: center;
+    font-size: 2.7em;
+    font-weight: 900;
+    font-family: customFont4;
+    color: black;
+    margin: auto auto auto auto;
+    padding: 8px 15px 8px 15px;
+    border: 2px #0f763f solid;
+    /* background: white; */
+}
+
+.topic2 {
+    border: none;
+}
+
+.heading2,
+.heading3,
+.heading4 {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    max-width: 260px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* margin-left: auto;
+  margin-right: auto; */
+    font-family: customFont4;
+    text-align: center;
+    /* margin:0; */
+    font-size: 3.4em;
+    transition: 0.3s;
+    /* text-shadow: 0 0 2px #3b3b3b; */
+    font-weight: 900;
+    padding-top: 2em;
+    padding-bottom: .6em;
+    color: white;
+}
+
+.heading3 {
+    position: unset;
+    color: black;
+    max-width: unset;
+    padding-top: 1.4em;
+    padding-bottom: 0.4em;
+}
+
+.arrow_Container {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 12em;
+    transform: translate(-50%, -50%);
+}
+
+.arrow_Container span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    margin: -10px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    animation: animate 2s infinite;
+}
+
+.arrow_Container span:nth-child(1) {
+    animation-delay: -.6s;
+}
+
+.arrow_Container span:nth-child(2) {
+    animation-delay: -.4s;
+}
+
+.arrow_Container span:nth-child(3) {
+    animation-delay: -.2s;
+}
+
+
+/* Animation for the Arrow icon on types of tea page */
+
+@keyframes animate {
+    0% {
+        transform: rotate(45deg) translate(-10px, -10px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(45deg) translate(10px, 10px);
+        opacity: 0;
+    }
+}
+
+.aboutUs,
+.homeText,
+.historyTxt,
+.leftAlignText,
+.leftalign,
+.teaTypesContent {
+    font-family: customFont2;
+    /* font-size:1rem; */
+    line-height: 2.3;
+    margin-left: 18px;
+    margin-right: 18px;
+    text-align: center;
+    /* padding: 5px 10px 5px 10px; */
+}
+
+.leftalign {
+    text-align: center;
+}
+
+.buttonHolder {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin: auto auto 7em auto;
+    /* margin-left: auto;
+  margin-right: auto;
+  margin-bottom:7em; */
+    padding-top: 2em;
+    /* max-width:500px; */
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownarrow {
+    width: 2em;
+}
+
+.leftAlignText,
+.teaTypesContent {
+    /* padding: 4%; */
+    /* box-shadow: 0px 3px 19px 6px rgba(0, 0, 0, 0.6); */
+    /* background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(156, 255, 189)); */
+    font-size: 14.4px;
+    text-align: left;
+    line-height: 2.3;
+}
+
+.leftAlignText li,
+.teaTypesContent li {
+    font-size: 0.9em;
+    list-style: unset;
+    list-style-position: inside;
+    line-height: 2.3;
+    margin-top: 1em;
+}
+
+.leftAlignText ol,
+.teaTypesContent ol {
+    padding-left: 0px;
+}
+
+.teaTypesContent ol {
+    list-style: none;
+    list-style-type: none;
+}
+
+.makingProcessContainer,
+.TeaTypesContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1.5em 2.5em 1.5em;
+    background-color: rgba(124, 124, 124, 0.1);
+    /* box-shadow: 0px 1px 10px 3px rgba(117, 117, 117, 0.3) inset; */
+}
+
+.makingProcessContainer div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* align-items: baseline;
+  justify-content: center; */
+    flex-direction: column;
+}
+
+.TeaTypesContainer {
+    box-shadow: 0px 2px 20px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.makingProcessContainer img,
+.TeaTypesContainer img {
+    width: 100%;
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.manufacImage {
+    max-width: 200px;
+}
+
+.TeaTypesContainer p {
+    margin-top: 0;
+    /* border:1px red solid; */
+}
+
+.makingProcessContainer p {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.TeaTypesContainer p {
+    text-align: center;
+}
+
+.TeaTypesContainer div {
+    margin: auto auto 1em auto;
+    /* margin-bottom: 1em; */
+    max-width: 600px;
+    /* margin-right: auto;
+  margin-left: auto; */
+}
+
+.boldText {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.boldText2 {
+    font-family: customFont4;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+@media screen and (min-width:910px) {
+    .makingProcessContainer {
+        flex-direction: row;
+        padding: 1.5em 1.5em 1.5em 1.5em;
+        /* max-height: 420px; */
+    }
+    .makingProcessContainer li {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .makingProcessContainer p {
+        text-align: left;
+        padding: 1em;
+        /* border:1px red solid; */
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .makingProcessContainer img {
+        padding: 1em;
+        border-radius: 30px;
+        /* border:1px red solid; */
+        max-width: 400px;
+        margin-top: auto;
+        margin-bottom: auto;
+        /* margin-left:1em; */
+    }
+    .processDescription2,
+    .processDescription4 {
+        order: 2;
+    }
+    .processImage2,
+    .processImage4 {
+        order: 1;
+    }
+}
+
+.slogan,
+.historySlogan {
+    color: #0f763f;
+    font-size: .9rem;
+    font-family: customFont;
+}
+
+.historySlogan {
+    font-size: .7rem;
+    font-family: customFont3;
+    color: black;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeText {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.aboutUsImageContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: 'abtImg1' 'abtImg2';
+}
+
+.imageContainer1,
+.imageContainer2 {
+    position: relative;
+    max-height: 320px;
+}
+
+.abtImage1,
+.abtImage2 {
+    grid-area: abtImg1;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.abtImages2 {
+    grid-area: abtImg2;
+}
+
+.abtText1,
+.abtText2 {
+    position: absolute;
+    font-family: customFont3;
+    text-align: center;
+    font-size: 2vmax;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+}
+
+.historyContainer {
+    max-width: 860px;
+    box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.6);
+    background-image: url("/img/background1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1rem 2rem 1rem;
+    top: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: 'historyText' 'historyImage';
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.historyTxt {
+    max-width: 700px;
+    grid-area: historyText;
+    text-align: center;
+    font-family: customFont2;
+    line-height: 2;
+}
+
+.historyImg {
+    filter: grayscale(100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 700px;
+    border: 10px rgba(255, 255, 255, 0.7) solid;
+    border-bottom: 20px rgba(255, 255, 255, 0.8) solid;
+    margin: 1em auto auto auto;
+    /* margin-top:1em; */
+    grid-area: historyImage;
+    width: 93%;
+    /* margin-left:auto;
+  margin-right: auto; */
+}
+
+.footerContainer {
+    background-color: rgba(221, 221, 221, 0.4);
+}
+
+.usefulLinks,
+.footerInfo,
+.socialMedia,
+.footerAboutUs,
+.footerEnding {
+    font-family: customFont2;
+    letter-spacing: 0.7px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    text-align: center;
+}
+
+.usefulLinks {
+    grid-area: footerLinks;
+}
+
+.footerInfo {
+    grid-area: footerInformation;
+}
+
+.footerEnding {
+    margin: unset;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.footerEnding p {
+    padding-top: 1em;
+    padding-bottom: 0.6em;
+    font-size: 0.7em;
+    color: white;
+}
+
+.footerAboutUs {
+    justify-content: center;
+    align-items: center;
+    grid-area: footerDetails;
+}
+
+.footerAboutUs img {
+    height: 4em;
+    margin-top: 2em;
+}
+
+.footerAboutUs li,
+.footerEnding p {
+    list-style: none;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.socialMedia {
+    flex-direction: row;
+    justify-content: center;
+    grid-area: footerSocial;
+    height: 3em;
+}
+
+.socialMedia img {
+    width: 2.2em;
+    transition: 0.3s;
+    transition-timing-function: linear;
+}
+
+.socialMedia img:hover {
+    width: 2.4em;
+    transition: 0.3s;
+}
+
+.socialMedia li {
+    list-style: none;
+    padding: 0.3em;
+}
+
+.usefulLinks li:nth-child(6) {
+    border: unset;
+}
+
+.usefulLinks h3,
+.footerInfo h3 {
+    font-size: 1em;
+}
+
+.footerInfo li:nth-child(1),
+.usefulLinks li:nth-child(1) {
+    /* text-align: left; */
+    color: black;
+    font-size: 1em;
+    border-bottom: none;
+    font-weight: 500;
+}
+
+.usefulLinks li,
+.footerInfo li {
+    line-height: 2;
+    font-size: 0.7em;
+    text-align: center;
+    border-bottom: 1px solid rgba(18, 105, 0, 0.2);
+    list-style-type: none;
+    list-style: none;
+    padding: 0.8em;
+}
+
+.usefulLinks a:hover {
+    color: green;
+    transition: 0.3s;
+}
+
+.usefulLinks a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerItem1:before {
+    background: url("/img/Maps-Pin-Place-icon.png") no-repeat 0 0;
+}
+
+.footerItem2 {
+    text-decoration: none;
+}
+
+.footerItem2:before {
+    background: url("/img/Phone-icon.png") no-repeat 0 0;
+}
+
+.footerItem3:before {
+    background: url("/img/Message-Bubble-icon.png") no-repeat 0 0;
+}
+
+.footerItem1:before,
+.footerItem2:before,
+.footerItem3:before {
+    display: block;
+    content: "";
+    /* display: inline-block; */
+    height: 32px;
+    width: 32px;
+    /* background:url("images/location.png") no-repeat 0 0; */
+    background-size: 32px 32px;
+    margin: auto auto 5px auto;
+    /* margin-right: auto;
+  margin-left: auto;
+  margin-bottom:5px; */
+}
+
+@media screen and (min-width:750px) {
+    .usefulLinks li,
+    .socialMedia li,
+    .footerAboutUs li,
+    .usefulLinks,
+    .footerInfo,
+    .socialMedia,
+    .footerAboutUs,
+    .footerEnding {
+        text-align: left;
+    }
+    .footerInfo li:nth-child(3),
+    .footerInfo li:nth-child(4) {
+        text-align: left;
+    }
+    .footerInfo li:nth-child(2) {
+        text-align: left;
+        text-align-last: right;
+    }
+    .usefulLinks {
+        padding-left: 10%;
+    }
+    .usefulLinks h3,
+    .footerInfo h3 {
+        padding: 0.5em;
+    }
+    .footerInfo li:nth-child(1),
+    .usefulLinks li:nth-child(1) {
+        text-align: left;
+        padding-left: 7px;
+    }
+    .footerItem1:before,
+    .footerItem2:before,
+    .footerItem3:before {
+        display: inline-block;
+        vertical-align: -60%;
+        padding: 0 3px 0 0;
+    }
+    .footerAboutUs {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .footerBox {
+        margin-left: 5%;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: auto 300px 200px;
+        grid-template-rows: auto auto;
+        grid-template-areas: 'footerDetails footerInformation footerLinks' 'footerDetails footerSocial footerLinks';
+    }
+    .aboutUsImageContainer {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+}
+
+.Benefits_Table_Container {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    margin-bottom: 1.7em;
+}
+
+.Benefits_Table_Container table {
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    width: 100%;
+    padding: 1em;
+    box-shadow: 0 2px 15px -6px rgba(0, 0, 0, 0.5);
+}
+
+.Benefits_Table_Container table thead {
+    display: none;
+    font-family: customFont;
+}
+
+.Benefits_Table_Container table tbody {
+    font-family: customFont2;
+}
+
+.Benefits_Table_Container table thead tr {
+    background: rgba(0, 87, 43, 0.9);
+    color: white;
+    font-family: customFont4;
+    font-size: 1.8em;
+}
+
+.Benefits_Table_Container table td {
+    display: block;
+    padding: 0.5em 1.3em 0.5em 1.3em;
+    text-align: left;
+}
+
+.Benefits_Table_Container table tr {
+    border-bottom: 2px solid green;
+    box-shadow: 0 4px 9px -8px rgba(0, 0, 0, 0.4);
+}
+
+.Benefits_Table_Container table th {
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.Benefits_Table_Container table tbody tr td:nth-child(1) {
+    background-color: rgba(0, 87, 43, 0.9);
+    color: white;
+    font-family: customFont2;
+    font-weight: 900;
+}
+
+.Benefits_Table_Container table td:nth-child(2):before,
+.Benefits_Table_Container table td:nth-child(3):before {
+    content: attr(data-heading) ": ";
+    font-family: customFont;
+}
+
+.Benefits_Table_Container table tfoot tr td {
+    font-family: customFont4;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: rgba(0, 87, 43, 0.9);
+    color: white;
+}
+
+@media (min-width:900px) {
+    .Benefits_Table_Container {
+        padding-left: 3.4em;
+        padding-right: 3.4em;
+    }
+    .Benefits_Table_Container table td:nth-child(2):before,
+    .Benefits_Table_Container table td:nth-child(3):before {
+        content: none;
+    }
+    .Benefits_Table_Container table tbody tr td:nth-child(1) {
+        background-color: unset;
+        color: black;
+        font-family: customFont2;
+    }
+    .Benefits_Table_Container table tbody tr td:nth-child(2) {
+        max-width: 280px;
+        border: 1px solid rgb(0, 68, 28, 0.6);
+        text-align: left;
+    }
+    .Benefits_Table_Container table td::before {
+        content: none;
+        font-weight: unset;
+    }
+    .Benefits_Table_Container table td,
+    .Benefits_Table_Container table th {
+        display: table-cell;
+        text-align: center;
+    }
+    .Benefits_Table_Container table thead {
+        display: contents;
+    }
+}
+
+@media screen and (min-width:550px) {
+    .aboutUs,
+    .homeText,
+    .slogan,
+    .historySlogan,
+    .leftAlignText,
+    .leftalign,
+    .teaTypesContent {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .aboutUs,
+    .homeText,
+    .historyTxt,
+    .leftalign {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .aboutUs,
+    .historyTxt,
+    .leftAlignText,
+    .leftalign,
+    .teaTypesContent {
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
+}
+
+@media screen and (min-width:940px) {
+    .homeText {
+        margin-top: 0px;
+    }
+}
+
+
+/* Small adjustment to the lines after 240px */
+
+@media screen and (max-width:240px) {
+    .hrLine,
+    .hrLine2 {
+        display: none;
+    }
+}
+
+
+/* Media Query for Galaxy Fold and below */
+
+@media screen and (max-width:310px) {
+    .navigation {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'logo burgerIcon';
+    }
+    .mobileShoppingButton {
+        display: none;
+    }
+}
+
+
+/* Buy Now css */
+
+.buyNowContainer {
+    font-family: customFont2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* font-size: 0.8em; */
+}
+
+.formElementContainer,
+#extrasContainer {
+    /* border:1px red solid; */
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.radio_group_container label {
+    margin-right: 0.6em;
+}
+
+.radio_button_holder span,
+#man_select_name {
+    color: #6B6B6B;
+    font-size: 0.8em;
+}
+
+#man_select_name {
+    margin-top: 1em;
+}
+
+.label_style,
+.label_style2 {
+    font-size: 1em;
+    font-family: customFont;
+}
+
+.label_style:after {
+    content: "*";
+    color: red;
+}
+
+.man_drop_container,
+.radio_group_container {
+    /* border:1px red solid; */
+    margin-top: 0.6em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.radio_group_container {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+}
+
+.man_drop_container select {
+    max-height: 30px;
+    margin-right: 1em;
+}
+
+.man_drop_container p {
+    /* margin-left: 1em; */
+    text-align: center;
+}
+
+.radio_button_holder {
+    margin-right: 1em;
+    margin-bottom: 0.3em;
+}
+
+.addButtonHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border:1px green solid; */
+    /* max-width: 250px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* border:1px blue solid; */
+    /* border:1px red solid; */
+}
+
+.formButton,
+.formButton2 {
+    margin: 0.5em;
+    cursor: pointer;
+    border: none;
+    padding: 0.7em 1.2em 0.7em 1.2em;
+    background-color: rgba(0, 87, 43, 0.8);
+    color: white;
+    font-size: 0.8em;
+    width: 150px;
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.formButton:hover,
+.formButton2:hover {
+    background-color: rgba(0, 68, 34, 0.9);
+}
+
+.formButton2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    /* border:1px red solid; */
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    /* margin-left: auto; */
+    /* margin-right: 2em; */
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding: 4em 1em 4em 1em;
+    /* border:1px red solid; */
+}
+
+@media screen and (max-width:300px) {
+    .man_drop_container select {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .radio_button_holder {
+        margin-right: 0.5em;
+    }
+    /* .formElementContainer {
+    flex-direction: row;
+    align-items: center;
+  } */
+}
+
+
+/* 
+                                               Media Query for the Desktop Site                                                */
+
+@media screen and (min-width: 1200px) {
+    /* CSS for the Header Container, changes to match the desktop  */
+    .container {
+        top: 0;
+        position: sticky;
+        display: block;
+        width: 1200px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* CSS for the navigation bar itself */
+    #navigationbar {
+        height: 85px;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+        border-bottom: 1px #37aa35 solid;
+        display: grid;
+        grid-template-rows: 5em;
+        grid-template-columns: 15em auto auto;
+        grid-template-areas: 'logo2 desktopNav shopping';
+    }
+    /* CSS for the navigation pannel for the desktop verison  */
+    .sidenav {
+        box-shadow: none;
+        margin-left: 5px;
+        grid-area: desktopNav;
+        overflow-x: visible;
+        transition: unset;
+        /* position: relative; */
+        position: sticky;
+        display: inline-block;
+        width: auto;
+        left: 0;
+        opacity: unset;
+        padding-top: 2em;
+        padding-left: 0.6em;
+        /* padding-bottom:auto; */
+        background-color: white;
+    }
+    /* CSS for the changes to the text inside the navigatio pannel */
+    .sidenav a {
+        position: sticky;
+        display: inline;
+        /* border-radius: 25px; */
+        padding: 8px 20px 8px 20px;
+        /* border:1px #24252a solid; */
+        margin: 0;
+        font-size: 1em;
+        /* font-size: .97em; */
+        color: #353745;
+        /* background-color: #713626; */
+    }
+    .sidenav :nth-child(6) {
+        display: none;
+    }
+    /* CSS for the changes to the text on hover */
+    .sidenav a:hover {
+        /* background-color: #f7edca;
+  color: #713626; */
+        /* font-size: .95em; */
+        transition: 0.3s;
+        text-decoration: unset;
+        color: #37aa35;
+    }
+    /* For Navigation Bar Child Elements (Horizontal Bottom Line) */
+    .sidenav a:after {
+        display: none;
+        position: absolute;
+        content: '';
+        border-radius: 100px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        transition: 0.3s;
+        background-color: #37aa35;
+    }
+    /* For Navigation Bar (Hover) Child Element (Horizontal Bottom Line) */
+    .sidenav a:hover:after {
+        display: block;
+    }
+    /* CSS for the website logo  */
+    .websitelogo2 {
+        display: block;
+        left: 0;
+        /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px; */
+        width: 14.2em;
+        /* height: 3.5em; */
+        grid-area: logo2;
+        /* position: fixed; */
+        margin-top: auto;
+    }
+    /* Slight changes to the container that holds the website logo */
+    .logo2 {
+        margin: auto auto auto 10px;
+        /* margin-top:auto;
+  margin-bottom: auto;
+  margin-left:10px; */
+    }
+    /* The burger icon is hidden */
+    .option {
+        display: none;
+    }
+    /* The Mobile site desktop navigation is hidden  */
+    .navigation {
+        display: none;
+    }
+    /* CSS for the cart icon for desktop  */
+    .cart {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.19);
+        display: block;
+        width: 1.4em;
+        margin-top: auto;
+        /* border: 1px red solid; */
+    }
+    /* CSS for the text inside the shopping button  */
+    .shoppingText {
+        grid-area: cartText;
+        display: block;
+        /* border:1px red solid; */
+        margin: 15px auto auto 0.4em;
+        /* margin-bottom:auto;
+  margin-top:15px;
+  margin-left:0.4em; */
+        padding: 0;
+        font-family: customFont;
+        text-decoration: none;
+        color: black;
+        font-size: .97em;
+    }
+    /* CSS for the shopping button  */
+    .shoppingButton {
+        grid-area: shopping;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 2.4em auto;
+        grid-template-areas: 'cartIcon cartText';
+        width: 100px;
+        height: 45px;
+        margin: 11.5% auto auto 5px;
+        /* margin-left:5px;
+  margin-bottom:auto;
+  margin-top:11.5%; */
+        padding-left: 10px;
+        text-decoration: none;
+        /* border:2px #353745 solid; */
+        border-radius: 18px;
+        transition: 0.3s;
+    }
+    /* CSS for the navigation on hover  */
+    .shoppingButton:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+        /* background-color:#78fa76; */
+        cursor: pointer;
+    }
+    .content {
+        width: 1200px;
+    }
+}
+
+
+/* Buynow table css */
+
+.currentOrderCaption,
+.currentOrderCaption2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.currentOrderCaption2 {
+    font-family: customFont2;
+}
+
+.buynow_table,
+.buynow_table2 {
+    /* border: 10px solid #ccc; */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    max-width: 450px;
+}
+
+.buynow_table2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* .buynow_table:nth-child(2) {
+  max-width:600px;
+} */
+
+.buynow_table tr,
+.buynow_table2 tr {
+    padding: 0.6em;
+    /* padding: 0.4em; */
+    background-color: rgba(204, 204, 204, 0.1);
+    border: 2px solid rgba(0, 87, 43, 0.4);
+    border-radius: 10px;
+}
+
+.buynow_table2 tr {
+    border-radius: unset;
+}
+
+.buynow_table2 tbody tr {
+    margin-bottom: 1.5em;
+}
+
+.buynow_table td,
+.buynow_table2 td {
+    min-height: 1em;
+    padding: 0.6em;
+    text-align: center;
+}
+
+
+/* .buynow_table {
+    border: 0;
+  } */
+
+.buynow_table tr,
+.buynow_table2 tr {
+    display: block;
+    border-bottom: 2px solid rgba(0, 87, 43, 0.4);
+    margin-bottom: 0.7em;
+}
+
+.buynow_table td,
+.buynow_table2 td {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 87, 43, 0.2);
+}
+
+.buynow_table2 td {
+    text-align: left;
+    font-family: customFont2;
+}
+
+.buynow_table td:nth-child(5) {
+    background-color: rgba(0, 87, 43, 0.9);
+    color: white;
+    font-weight: 900;
+}
+
+
+/* .buynow_table:nth-child(2) td {
+    text-align: right;
+  } */
+
+.buynow_table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.buynow_table td:last-child,
+.buynow_table2 td:last-child {
+    border-bottom: 0;
+}
+
+.card {
+    background-color: rgba(0, 87, 43, 0.9);
+    color: white;
+}
+
+@media screen and (min-width:600px) {
+    .buynow_table {
+        max-width: 500px;
+    }
+    .buynow_table2 {
+        max-width: 600px;
+    }
+    .buynow_table td {
+        font-size: 0.9em;
+    }
+    .buynow_table2 td {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .buyNowContainer,
+    .buyNowContainer2 {
+        border: none;
+        flex-direction: row;
+    }
+    .formContainer,
+    .formContainer2 {
+        margin-right: 7%;
+    }
+}
+
+.teaHouseLocation {
+    display: block;
+    grid-area: map1;
+    width: 90%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    /* padding:1em; */
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.1);
+    margin-top: unset;
+}

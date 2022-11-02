@@ -1,0 +1,24 @@
+{
+    "name": "Tea House",
+    "short_name": "TeaHouse",
+    "description": "Tea House is a Tea Marketing site where it sells different varities of Tea that is found in Sri Lanka",
+    "lang": "en",
+    "start_url": "index.html",
+    "orientation": "portrait-primary",
+    "icons": [{
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "/img/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "/img/png",
+            "purpose": "maskable"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

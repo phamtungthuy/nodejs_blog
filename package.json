@@ -4,8 +4,10 @@
     "description": "",
     "main": "src/index.js",
     "scripts": {
+        "beautiful": "lint-staged",
         "start": "nodemon --inspect src/index.js",
-        "watch": "node-sass --watch src/resources/scss/ -o src/public/css/",
+        "watch": "node-sass --watch src/resources/scss/ src/public/css/",
+        "watch2": "node-sass --watch /scss",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -25,13 +27,26 @@
         "url": "https://github.com/phamtungthuy/nodejs_blog/issues"
     },
     "homepage": "https://github.com/phamtungthuy/nodejs_blog#readme",
+    "lint-staged": {
+        "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "dependencies": {
         "express": "^4.18.2",
         "express-handlebars": "^6.0.6",
-        "node-sass": "^7.0.3"
+        "mongoose": "^6.6.6",
+        "node-sass": "^7.0.3",
+        "nodemon": "^2.0.20"
     },
     "devDependencies": {
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
         "morgan": "^1.10.0",
+        "prettier": "^2.7.1",
         "sass": "^1.55.0"
     }
 }

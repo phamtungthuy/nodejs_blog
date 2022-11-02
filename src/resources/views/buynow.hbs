@@ -1,0 +1,148 @@
+<div class="content">
+    <br><br>
+    <h1 class="topic2"> Order your Favourite Tea</h1>
+    <br>
+    <fieldset class="buyNowContainer">
+
+      <div class="formContainer">
+        <div class="formItems">
+          <!-- <legend>Buy Now:</legend> -->
+          <form id="buyNowForm">
+            <div class="formElementContainer">
+              <label class="label_style">Manufacturer:</label>
+              <div class="man_drop_container">
+                <select id="tea_manufacturer" onchange="cal()" required>
+                  <option value="" hidden>-Select Manufacturer-</option>
+                  <option value="1000">Dilma</option>
+                  <option value="1500">Jones</option>
+                  <option value="1000">George Steuart</option>
+                  <option value="2000">Malwatte Valley Plantations</option>
+                  <option value="1000">Prestige Ceylon Teas</option>
+                  <option value="2000">Empire Teas</option>
+                </select>
+                <!-- <p id="man_select_name"> </p> -->
+                <span id="man_select_name"></span>
+              </div>
+            </div>
+
+
+            <br>
+
+            <div class="formElementContainer">
+              <label class="label_style"> Packaging Type: </label>
+              <div class="radio_group_container">
+
+                <div class="radio_button_holder">
+                  <input type="radio" name="packageType" value="1000" onclick="getValue(this)" required>
+                  <label>Paper Pouches</label><span>(Rs.1000)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input type="radio" name="packageType" value="5000" onclick="getValue(this)" required>
+                  <label>Tins</label><span>(Rs.5000)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input type="radio" name="packageType" value="2500" onclick="getValue(this)">
+                  <label>Bags</label><span>(Rs.2500)</span>
+                </div>
+              </div>
+            </div>
+
+
+            <br>
+            <div class="formElementContainer">
+              <label class="label_style"> Size: </label>
+
+              <div class="radio_group_container">
+                <div class="radio_button_holder">
+                  <input type="radio" name="sizes" value="1000" onclick="getSizeValue(this)" required>
+                  <label>Small</label><span>(Rs.1000)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input type="radio" name="sizes" value="2500" onclick="getSizeValue(this)">
+                  <label>Medium</label><span>(Rs.2500)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input type="radio" name="sizes" value="5000" onclick="getSizeValue(this)">
+                  <label>Large</label><span>(Rs.5000)</span>
+
+                </div>
+              </div>
+            </div>
+
+            <br><br>
+
+            <div id="extrasContainer">
+              <label class="label_style2"> Extras: </label>
+
+              <div class="radio_group_container">
+
+                <div class="radio_button_holder">
+                  <input class="extrasCheckbox" type="checkbox" value="500" name="Mug" onclick="getCheckbox()">
+                  <label> Mug </label><span>(Rs.500)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input class="extrasCheckbox" type="checkbox" value="1000" name="Silver" onclick="getCheckbox()">
+                  <label> Silver </label><span>(Rs.1000)</span>
+                </div>
+
+                <div class="radio_button_holder">
+                  <input class="extrasCheckbox" type="checkbox" value="1500" name="Wooden Souvenier"
+                    onclick="getCheckbox()">
+                  <label> Wooden Souvenier </label><span>(Rs.1500)</span>
+                </div>
+              </div>
+            </div>
+            <br>
+        </div>
+        <div class="addButtonHolder">
+          <input class="formButton" type="submit" value="Add to Order" onclick="addtoTotalOrder()">
+          <input class="formButton" type="submit" value="Add to Favourite" onclick="addToFav()">
+        </div>
+        </form>
+        <div class="addButtonHolder">
+          <input class="formButton" type="submit" value="Add Fav to Order" onclick="addFavToOrder()">
+          <input class="formButton" type="submit" value="Check Loyalty" onclick="checkLoyalty()">
+        </div>
+        <input class="formButton2" type="submit" value="Place Order" onclick="calLoyalty()">
+      </div>
+      <table class="buynow_table">
+
+        <tbody>
+          <caption class="currentOrderCaption">Current Order</caption>
+          <tr>
+            <td id="current_order" data-label="Manufacturer"></td>
+            <td id="pack_order" data-label="Package"></td>
+            <td id="size_field" data-label="Size"></td>
+            <td id="extra_field" data-label="Extras"></td>
+            <td id="total_field" data-label="Total"></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <br><br>
+
+    <!-- <h2 class="currentOrderCaption2"> Total Order</h2> -->
+    <table id="totalOrderTable" class="buynow_table2">
+      <caption class="currentOrderCaption2">Total Order</caption>
+    </table>
+
+
+    <table class="buynow_table2">
+      <tr>
+        <td id="grand_total" class="card">
+          Grand Total = 0
+        </td>
+      </tr>
+    </table>
+
+    <p id="fav">
+
+    </p>
+    {{> footer}}
+</div>
+<script src="/main.js"></script>

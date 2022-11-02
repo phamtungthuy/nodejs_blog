@@ -1,0 +1,201 @@
+ <div class="slideshow_container">
+    <div class="homepage_slides">
+      <img class="slideImages" src="img/slideImage1.webp" alt="slideImage1">
+      <div class="slideshowTextContainer">
+        <div class="slideText1"> ORDER YOUR TEA ONLINE</div>
+        <div class="slideText2"> Get your Favourite Tea <br> Delivered to Your Doorstep </div>
+        <button class="slideshowButton" onclick="openURI('/typesoftea')">View All Types of Tea</button>
+      </div>
+    </div>
+    <div class="homepage_slides">
+      <picture>
+        <!-- this is for the desktop verison -->
+        <source media="(min-width:650px)" srcset="img/slideshow1.webp">
+
+          <!-- this is for the tablet view -->
+        <source media="(min-width:400px)" srcset="img/slideshow1_tab.webp">
+
+          <!-- This is for the mobile version -->
+        <img class="slideImages2" src="img/slideshow1_mobile.webp" alt="slideImage2"> 
+      </picture>
+      
+      <div class="slideshowTextContainer">
+        {{!-- <div class="slideText3"> SELECT FROM A VARIETY OF TEA MANUFACTURERS</div> --}}
+        {{!-- <div class="slideText4"> From our Largest Collection </div> --}}
+      </div>
+    </div>
+    <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="dotContainer" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <br>
+    <div class="topicContainer">
+      <div class="hrLine"> </div>
+      <div class="topic2">About Tea House</div>
+      <div class="hrLine2"> </div>
+    </div>
+
+    <p class="aboutUs"> Tea House has a large collection of Tea types from which you can order. We provide high quality
+      Tea supplied from the best Tea Manufactures across Sri-Lanka. We are pioneers in marketing Tea products island
+      wide. Tea House has a huge collection of Tea, offering different flavours of Tea to suit your preffered choices.
+      Visit our Types of Tea Page to browse our collection. </p>
+    <p class="topic2"> Our Mission and Vision</p>
+    <p class="aboutUs">
+      Our Mission is to become a successful Tea Marketing company in Sri Lanka by delivering unique, affordable and
+      quality Tea to meet our customer expectations. We have long term partnerships with the leading Tea Manufacturing
+      companies in Sri Lanka like Dilmah, Ceylon Tea etc. which allows us to ensure that we satisfy our client
+      requirements.
+      <br><br><b><i class="slogan"> "Order your tea and taste the exquisite fragrance!"</i></b>
+    </p>
+
+    <div class="aboutUsImageContainer">
+      <div class="imageContainer1">
+        <picture>
+          <!-- this is for the desktop verison -->
+          <source media="(min-width:650px)" srcset="img/abtImage1.webp">
+  
+            <!-- this is for the tablet view -->
+          <source media="(min-width:400px)" srcset="img/abtImage1_tab.webp">
+  
+            <!-- This is for the mobile version -->
+          <img class="abtImage1" src="img/abtImage1_mobile.webp" alt="slideImage2"> 
+        </picture>
+        <!-- <img class="abtImage1" src="images/abtImage1.webp" alt="aboutUsImg1"> -->
+        <div class="abtText1"> No Compromise on Quality</div>
+      </div>
+      <div class="imageContainer2">
+        <img class="abtImage2" src="img/abtImage3.webp" alt="aboutUsImg2">
+        <div class="abtText2"> Select the Flavour of your Choice </div>
+      </div>
+    </div>
+    <br>
+    <div class="topicContainer">
+      <div class="hrLine"> </div>
+      <div class="topic2">History Of Tea</div>
+      <div class="hrLine2"> </div>
+    </div>
+
+    <div class="historyContainer">
+      <div class="historyTxt">
+        The history of Tea goes back to 1824 when the British decided to bring a tea plant from China to Sri Lanka. This
+        plant was planted within the Royal Botanical Gardens, Peradeniya. This was considered to be one of the fist
+        non-commercial Tea Plantation in Sri Lanka.
+        <p> Later in the year 1867, James Taylor arrived in Sri Lanka and planted nearly 19 acres of Tea at the
+          Loolecondra Estate within the city of Kandy. The Sales began to pick up only in the year 1872 and over the
+          years Tea production and plantation in Sri Lanka had improved tremendously.</p>
+        <p> Later in the years 1894-1925 two organizations (Colombo Tea Trader’s Association and Tea Research
+          Institute), formed to assist in the boost of Tea Production and to help the country export Tea to other
+          countries.</p>
+      </div>
+      <!-- Main responsive Image -->
+      <img class="historyImg" src="img/oldTeaPhoto.webp" alt="history_image">
+      <br><b><i class="historySlogan"> "Tea Estate from the 18th Century"</i></b>
+    </div>
+    <br>
+    <div class="topicContainer">
+      <div class="hrLine"> </div>
+      <div class="topic2">Tea in Sri Lanka</div>
+      <div class="hrLine2"> </div>
+    </div>
+    <div class="homeImageContainer">
+      <picture>
+        <!-- this is for the desktop verison -->
+        <source media="(min-width:650px)" srcset="img/homePageImg2.webp">
+
+          <!-- this is for the tablet view -->
+        <source media="(min-width:400px)" srcset="img/homePageImg2_tab.webp">
+
+          <!-- This is for the mobile version -->
+        <img class="homeImages" src="img/homePageImg2_mobile.webp" alt="slideImage2"> 
+      </picture>
+      <!-- <img class="homeImages" src="images/homePageImg2.webp" alt="homepageimg"> -->
+      <div class="homeImageTextContainer">
+        <div class="homeText1">
+          There are many Tea Manufactures in Sri-Lanka. Choose from a list of the best Tea Manufacturers in Sri Lanka
+          <br>
+          <button class="homeButton" onclick="openURI('/teamanufacturers')">View more</button>
+        </div>
+        <div class="homeText2">
+          <ul class="customizedBullets">
+            <li>Dilma</li>
+            <li>Jones</li>
+            <li>George Steuart</li>
+            <li>Ceylon Tea </li>
+            <li>Empire teas</li>
+            <li>Malwatte </li>
+            <li>Maliban Tea</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="topicContainer">
+      <div class="hrLine"> </div>
+      <div class="topic2">Tea Making Process</div>
+      <div class="hrLine2"> </div>
+    </div>
+
+    <!-- This is part 2 -->
+
+
+    <div class="leftAlignText">
+      The process of producing tea has a series of steps that has to be followed to ensure that the best flavor is
+        produced. Tea is mainly harvested by hand but not all the leaves are plucked but the younger ones. Here are the
+        steps involved in Tea Production:
+      <ol type="1">
+        
+
+        <li><b class="boldText"> Withering: </b>
+          <div class="makingProcessContainer">
+            <p class="processDescription1">At this stage the leaves are put onto long tables which contain a mesh that
+              would often have a ventilation system built beneath itself. Since most of the young tea leaves have some
+              moisture in it, the ventilation system would reduce the moisture by about 60%. Withering is considered to
+              be of the critical stages.</p>
+            <img class="processImage1" src="img/teaWithering.webp" alt="withering">
+          </div>
+        </li>
+
+        <li><b class="boldText"> Rolling: </b>
+          <div class="makingProcessContainer">
+            <p class="processDescription2"> After the withering stage is completed, the rolling process happens. This is
+              where the leaves are put into a rolling machine that would twist the tea leaves and thereby the juices
+              within the leaves are exposed to air. In order to get optimum results, this process would often require a
+              high amount of expertise. Once this is successfully done, then the fermentation process would begin.</p>
+            <img class="processImage2" src="img/teaRolling.webp" alt="rolling">
+          </div>
+        </li>
+
+        <li><b class="boldText"> Fermenting: </b>
+          <div class="makingProcessContainer">
+            <p class="processDescription3"> Once the withering and rolling stages are completed, it is time for the most crucial process which is the fermenting process.  This process will consume a lot of time, mostly 3-5 hours. At this stage most of the bitter taste is eliminated and that particular tea’s actual flavour is gradually revealed. </p>
+            <img class="processImage3" src="img/fermenting.webp" alt="fermenting">
+          </div>
+        </li>
+
+        <li><b class="boldText"> Drying: </b>
+          <div class="makingProcessContainer">
+            <p class="processDescription4"> This process usually takes about 25 minutes and is also crucial for the production of high-quality tea. Here the tea leaves are placed in an oven like machine that heats up and dries the tea leaves until they get their dark color. The moisture is further reduced in this process to make sure that the tea leaves can last long. </p>
+            <img class="processImage4" src="img/teaDrying.webp" alt="drying">
+          </div>
+        </li>
+
+        <li><b class="boldText"> Sorting: </b>
+          <div class="makingProcessContainer">
+            <p class="processDescription5"> This is the final step of the tea production. Since there are different Grades of Tea, it is vital to organize and sort the Tea leaves accordingly. Once this stage is done the factory workers would do a final check and the Tea is now ready for packaging and distribution.</p>
+            <img class="processImage5" src="img/teaSorting.webp" alt="sorting">
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <br>
+    <br>
+    {{> footer}}
+  </div>
